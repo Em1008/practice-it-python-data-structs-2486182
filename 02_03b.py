@@ -23,9 +23,8 @@ def print_tasks():
         print(t.taskDesc)
 
 # Can't get this to work properly :(
-def task_complete():
-    completed_task = "Make List"
-    return task_queue.remove(completed_task)
+def task_complete(task):
+    return task_queue.remove(task)
 
 def main():
     #add code here
@@ -34,7 +33,8 @@ def main():
     add_task(Task("Respond to email", True))
     print_tasks()
     print(do_task())
-   
+    task_complete(Task("Make breakfast"))
+
     return
 
 if __name__ == "__main__":
